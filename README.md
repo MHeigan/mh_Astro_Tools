@@ -6,7 +6,7 @@ All tools use a black-and-red interface to reduce glare and help preserve dark a
 To make launches more comfortable in the dark, each application includes a short fade-from-black on startup to soften any brief flashes that can occur when Windows creates a new window.
 
 **Download the latest release to install**:  
-[https://github.com/MHeigan/mh_Astro_Tools/releases/tag/astrophotography](https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v1_2_0_1)
+[https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v1_2_0_1](https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v1_2_0_1)
 
 **What’s included**
 
