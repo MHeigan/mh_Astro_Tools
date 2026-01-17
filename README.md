@@ -68,10 +68,34 @@ See License_Agreement.pdf.
 
 **Changelog (v1.1.0.3)**
 
-Added a unified Inno Setup installer for the full suite (mh_Astro_Tools_Suite_Setup_1.1.0.3.exe)
+Added a unified Inno Setup installer for the full suite (mh_Astro_Tools_Suite_Setup_1.1.0.3.exe).
 
-Installer now creates Desktop shortcuts and Start Menu entries (Launcher + Manuals)
+Installer now creates Desktop shortcuts and Start Menu entries (Launcher + Manuals).
 
-Manuals standardized to a consistent STYLED2 layout (Calibri Headings + blue #0372C1), including a “START HERE” launcher guide
+Manuals standardized to a consistent STYLED2 layout (Calibri Headings + blue #0372C1), including a “START HERE” launcher guide.
 
-Suite-wide focus on night-vision usability, including a fade-from-black startup approach to reduce brief launch flashes
+Suite-wide focus on night-vision usability, including a fade-from-black startup approach to reduce brief launch flashes.
+
+## Changelog — from v1.1.0.3 to v1.2.0.1 
+
+### Astrophotography Exposure Calculator
+- Updated the physics model used for exposure and limiting magnitude estimates.
+- UI updated to fit 1920×1080 laptop screens: fixed‑width layout, narrower results panel, and a Notes field.
+- Improved behaviour/readability: focus border fix, and exposure time now also shows **minutes + seconds**.
+- Output interpretation clarified: the exposure recommendation is **per‑sub (per‑light frame)**, not total integration time.
+
+### UTC / GPS / Astronomy Data & Weather
+- Reworked UI into a two‑panel layout (Astronomy Data & Weather moved to the right).
+- Added **pressure (hPa)** and a **pressure trend indicator**.
+- Added a **seeing estimate** (best‑effort; may show N/A when unavailable).
+- Added right‑panel actions: **Refresh**, **Save Data** (timestamped `.txt` snapshot), and **Copy Data** (clipboard).
+- Restored startup behaviour: auto‑load saved `location.json` (if present), otherwise auto‑fetch an approximate IP location as a starting point.
+- Background loading to keep startup smooth, plus auto‑refresh of the right panel (every ~10 minutes).
+- Fixed right panel width from resizing when live data replaces N/A (prevents UI “jump”).
+
+### Night Vision Screen Overlay
+- Improved “always‑on‑top” behaviour so the red overlay remains above minimised app tile bars (reduced flicker).
+
+### Suite / Installer / Manuals
+- Suite release naming standardised to include platform + version + architecture (`..._Win_..._x64`).
+- Manuals continue to ship as PDFs via the installer build (and install to the manuals shortcut location).
