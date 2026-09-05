@@ -1,101 +1,88 @@
-**mh_astro_tools — Astrophotography Tool Suite (Windows)**
+# mh_astro_tools Suite — v2.0.0
 
-mh_astro_tools is a small suite of night-vision-friendly utilities for astrophotography and astronomy.
-All tools use a black-and-red interface to reduce glare and help preserve dark adaptation during an imaging session.
+Night-vision (red-on-black) utilities for astrophotography and astronomy. One
+Launcher, six tools, all sharing a dark theme that protects dark adaptation at
+the telescope.
 
-To make launches more comfortable in the dark, each application includes a short fade-from-black on startup to soften any brief flashes that can occur when Windows creates a new window.
+© 2026 Martin P. Heigan · [anti-matter-3d.com](https://anti-matter-3d.com) ·
+licensed under 
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-**Download the latest release to install**:  
-[https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v1_2_0_1](https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v1_2_0_1)
+## What's new in v2.0.0
 
-**What’s included**
+Suite-wide migration from Python 3.8 / Tkinter (and PyQt5/PyQt6) to **Python 3.13
+/ PySide6 (Qt6)**, on one consistent red-on-black night-vision design: a unified
+theme, a deterministic red text caret across all input fields, per-user
+writable config under `Documents\\mh_astro_tools\\`, wheel-safe dropdowns,
+frameless title-bar chrome and a fade-from-black on launch. See `RELEASE.md` for
+the full notes.
 
-**Tools appear in the Launcher in this order:**
+## Tools
 
-**Exposure Calculator**
-Calculates recommended exposure time for deep-sky imaging using telescope/lens parameters, sensor specs, sky quality (Bortle), binning, and filter bandwidth. Includes planning estimates such as field of view, pixel scale, and limiting magnitude.
 
-**UTC / GPS / Weather**
-Displays local time and UTC, supports location entry (manual or online fetch), and provides useful planning data for sessions (timing, basic observing conditions, etc.).
+|Tool                 |Description                                                                                                                                      |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+|**Suite Launcher**   |Opens every tool; Full and Compact modes; right-click any tool for its PDF manual.                                                               |
+|**Exposure Calculator**|Deep-sky sub-exposure planner — AB-magnitude SNR model, field of view, pixel scale, sky-limited time, limiting magnitude.                        |
+|**UTC / GPS / Weather**|Local time, UTC, exposure timer, saved GPS site, and an auto-refreshing astronomy + weather panel (sun/moon, dew, pressure, seeing, declination).|
+|**500 Rule Calculator**|Maximum tripod exposure before star trailing: 500 / (focal × crop).                                                                              |
+|**Night Vision Overlay**|Adjustable red screen tint — click-through, all monitors, global hotkeys, presets, region cutout.                                                |
+|**Scientific Calculator**|Night-vision scientific / regular calculator with DEG/RAD trig, a safe expression evaluator, and a memory panel.                                 |
+|**Weather Widget**   |Compact desktop weather HUD with a condensation-risk readout, living in the system tray.                                                         |
 
-**500 Rule Calculator**
-Estimates the maximum shutter speed for tripod-based nightscape photography before star trailing becomes noticeable, using focal length and sensor crop factor.
+## Download
 
-**Night Vision Red Screen (Overlay)**
-A red-tinted click-through overlay with adjustable contrast/black level, red intensity/brightness, and opacity—useful across the entire desktop.
 
-**Night Vision Scientific Calculator**
-A night-mode calculator with Regular and Scientific modes plus a memory panel for quick reuse of results.
+[mh_Astro_Tools_Suite_Win_Setup_v2_0_0.exe](https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v2_0_0)
+— GitHub release (recommended)
 
-**Installation (Windows)**
+Also available direct from 
+[anti-matter-3d.com](https://anti-matter-3d.com/mh_tools/mh_astro_tools/mh_Astro_Tools_Suite_Win_Setup_v2_0_0.exe)
+, and listed on the [Tools page](https://anti-matter-3d.com/tools/).
 
-This release is distributed via an Inno Setup installer:
+SHA-256:
 
-**mh_Astro_Tools_Suite_Setup_1.1.0.3.exe**
+```
+26d3242d1e6ea2019a240ada110464525b444b19c7a10a14cd6dfb910dd88f29
+certutil -hashfile mh_Astro_Tools_Suite_Win_Setup_v2_0_0.exe SHA256
+```
+## Distribution
 
-Run the installer and follow the on-screen steps.
+Installed by a single Windows installer. No Python or runtime is required —
+everything is bundled. User manuals (one PDF per tool plus a START HERE guide)
+and `License_Agreement.pdf` are installed alongside the tools.
 
-**Shortcuts created**
+## System requirements
 
-The installer creates shortcuts for:
 
-**Astro Tools Launcher**
+|                |                                                                          |
+|----------------|--------------------------------------------------------------------------|
+|Operating system|Windows 10 / 11, 64-bit                                                   |
+|Display         |1920×1080 or larger recommended; the Overlay supports multiple monitors   |
+|Internet        |Optional — only UTC / GPS / Weather and the Weather Widget fetch live data|
+|Runtime         |None; Python and all libraries are bundled                                |
 
-**Astro Tools Manuals**
+User settings, saved locations and exported results live under 
+`Documents\\mh_astro_tools\\` and are preserved across upgrades and uninstalls.
 
-The suite is also added to the Start Menu (under “Astro Tools Suite”).
+## Licence
 
-**Quick start**
+Licensed under **CC BY-NC-ND 4.0** — see [License.md](License.md) and the
+installed `License_Agreement.pdf`. Non-commercial use, attribution required, no
+redistribution of modified versions.
 
-Launch Astro Tools Launcher
+## Security
 
-(Recommended) Start Night Vision Screen at the beginning of your session
+All executables are code-signed by Certum with SHA-256 Authenticode and an
+RFC-3161 timestamp, and are submitted to Microsoft WDSI and VirusTotal before
+release. Each installed tool folder carries a signed `manifest.cat` and a `
+SHA256SUMS.txt`, and the installer's own SHA-256 is published above. Freshly
+built Nuitka/MSVC binaries — calculation tools especially — can trigger
+heuristic, reputation-based warnings in some browsers and antivirus engines;
+these are not malware detections. Verify the Authenticode signature and the
+published SHA-256 if in doubt.
 
-Open the tools you need for planning, timing, and calculations
+## Links
 
-Open Astro Tools Manuals for the PDF documentation
-
-💡 **Tip:** Launching the Night Vision Screen first also helps when Windows dialogs (Browse… / Save As…) appear, because those dialogs may not follow your night theme and can be bright.
-
-**Documentation**
-
-PDF manuals are included with the suite in the Astro Tools Manuals folder, including the **START HERE** launcher guide.
-
-**License**
-
-**CC BY-NC-ND 4.0** — Attribution-NonCommercial-NoDerivatives 4.0 International
-See License_Agreement.pdf.
-
-**Changelog (v1.1.0.3)**
-
-Added a unified Inno Setup installer for the full suite (mh_Astro_Tools_Suite_Setup_1.1.0.3.exe).
-
-Installer now creates Desktop shortcuts and Start Menu entries (Launcher + Manuals).
-
-Manuals standardized to a consistent STYLED2 layout (Calibri Headings + blue #0372C1), including a “START HERE” launcher guide.
-
-Suite-wide focus on night-vision usability, including a fade-from-black startup approach to reduce brief launch flashes.
-
-## Changelog — from v1.1.0.3 to v1.2.0.1 
-
-### Astrophotography Exposure Calculator
-- Updated the physics model used for exposure and limiting magnitude estimates.
-- UI updated to fit 1920×1080 laptop screens: fixed‑width layout, narrower results panel, and a Notes field.
-- Improved behaviour/readability: focus border fix, and exposure time now also shows **minutes + seconds**.
-- Output interpretation clarified: the exposure recommendation is **per‑sub (per‑light frame)**, not total integration time.
-
-### UTC / GPS / Astronomy Data & Weather
-- Reworked UI into a two‑panel layout (Astronomy Data & Weather moved to the right).
-- Added **pressure (hPa)** and a **pressure trend indicator**.
-- Added a **seeing estimate** (best‑effort; may show N/A when unavailable).
-- Added right‑panel actions: **Refresh**, **Save Data** (timestamped `.txt` snapshot), and **Copy Data** (clipboard).
-- Restored startup behaviour: auto‑load saved `location.json` (if present), otherwise auto‑fetch an approximate IP location as a starting point.
-- Background loading to keep startup smooth, plus auto‑refresh of the right panel (every ~10 minutes).
-- Fixed right panel width from resizing when live data replaces N/A (prevents UI “jump”).
-
-### Night Vision Screen Overlay
-- Improved “always‑on‑top” behaviour so the red overlay remains above minimised app tile bars (reduced flicker).
-
-### Suite / Installer / Manuals
-- Suite release naming standardised to include platform + version + architecture (`..._Win_..._x64`).
-- Manuals continue to ship as PDFs via the installer build (and install to the manuals shortcut location).
+- Tools & updates — <https://anti-matter-3d.com/tools/>
+- Contact — <https://anti-matter-3d.com/contact/>
