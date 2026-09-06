@@ -34,7 +34,7 @@ the full notes.
 
 
 [mh_Astro_Tools_Suite_Win_Setup_v2_0_0.exe](https://github.com/MHeigan/mh_Astro_Tools/releases/tag/mh_astro_tools_v2_0_0)
-— GitHub release (recommended)
+— GitHub release.
 
 Also available direct from 
 [anti-matter-3d.com](https://anti-matter-3d.com/mh_tools/mh_astro_tools/mh_Astro_Tools_Suite_Win_Setup_v2_0_0.exe)
