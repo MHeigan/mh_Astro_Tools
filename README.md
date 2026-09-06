@@ -85,4 +85,3 @@ published SHA-256 if in doubt.
 ## Links
 
 - Tools & updates — <https://anti-matter-3d.com/tools/>
-- Contact — <https://anti-matter-3d.com/contact/>
